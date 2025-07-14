@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblMessage = new System.Windows.Forms.Label();
             this.txtOperatorId = new System.Windows.Forms.TextBox();
             this.lblUserId = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.picShowPassword = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.picShowPassword)).BeginInit();
+            this.picShowPasswordIcon = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picShowPasswordIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnLogin.Location = new System.Drawing.Point(168, 267);
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Location = new System.Drawing.Point(214, 294);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(84, 33);
@@ -53,7 +54,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(168, 206);
+            this.txtPassword.Location = new System.Drawing.Point(214, 233);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(211, 30);
@@ -66,7 +67,7 @@
             this.lblMessage.AutoSize = true;
             this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblMessage.ForeColor = System.Drawing.Color.DimGray;
-            this.lblMessage.Location = new System.Drawing.Point(164, 316);
+            this.lblMessage.Location = new System.Drawing.Point(210, 343);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(94, 23);
             this.lblMessage.TabIndex = 6;
@@ -75,7 +76,7 @@
             // 
             // txtOperatorId
             // 
-            this.txtOperatorId.Location = new System.Drawing.Point(168, 147);
+            this.txtOperatorId.Location = new System.Drawing.Point(214, 174);
             this.txtOperatorId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOperatorId.Name = "txtOperatorId";
             this.txtOperatorId.Size = new System.Drawing.Size(211, 30);
@@ -88,37 +89,37 @@
             this.lblUserId.AutoSize = true;
             this.lblUserId.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblUserId.ForeColor = System.Drawing.Color.DimGray;
-            this.lblUserId.Location = new System.Drawing.Point(64, 151);
+            this.lblUserId.Location = new System.Drawing.Point(110, 177);
             this.lblUserId.Name = "lblUserId";
-            this.lblUserId.Size = new System.Drawing.Size(103, 23);
+            this.lblUserId.Size = new System.Drawing.Size(68, 23);
             this.lblUserId.TabIndex = 9;
-            this.lblUserId.Text = "Operator Id:";
+            this.lblUserId.Text = "User Id:";
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblPassword.ForeColor = System.Drawing.Color.DimGray;
-            this.lblPassword.Location = new System.Drawing.Point(64, 210);
+            this.lblPassword.Location = new System.Drawing.Point(110, 237);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(84, 23);
             this.lblPassword.TabIndex = 10;
             this.lblPassword.Text = "Password:";
             // 
-            // picShowPassword
+            // picShowPasswordIcon
             // 
-            this.picShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picShowPassword.Image = ((System.Drawing.Image)(resources.GetObject("picShowPassword.Image")));
-            this.picShowPassword.Location = new System.Drawing.Point(402, 210);
-            this.picShowPassword.Name = "picShowPassword";
-            this.picShowPassword.Size = new System.Drawing.Size(31, 26);
-            this.picShowPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picShowPassword.TabIndex = 11;
-            this.picShowPassword.TabStop = false;
-            this.picShowPassword.Click += new System.EventHandler(this.picShowPassword_Click);
-            this.picShowPassword.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picShowPassword_MouseDown);
-            this.picShowPassword.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picShowPassword_MouseMove);
-            this.picShowPassword.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picShowPassword_MouseUp);
+            this.picShowPasswordIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picShowPasswordIcon.Image = global::OperatorEntryApp.Properties.Resources.password_icon;
+            this.picShowPasswordIcon.Location = new System.Drawing.Point(448, 237);
+            this.picShowPasswordIcon.Name = "picShowPasswordIcon";
+            this.picShowPasswordIcon.Size = new System.Drawing.Size(31, 26);
+            this.picShowPasswordIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picShowPasswordIcon.TabIndex = 11;
+            this.picShowPasswordIcon.TabStop = false;
+            this.picShowPasswordIcon.Click += new System.EventHandler(this.picShowPassword_Click);
+            this.picShowPasswordIcon.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picShowPassword_MouseDown);
+            this.picShowPasswordIcon.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picShowPassword_MouseMove);
+            this.picShowPasswordIcon.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picShowPassword_MouseUp);
             // 
             // LoginForm
             // 
@@ -126,7 +127,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(588, 540);
-            this.Controls.Add(this.picShowPassword);
+            this.Controls.Add(this.picShowPasswordIcon);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUserId);
             this.Controls.Add(this.txtOperatorId);
@@ -141,7 +142,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LoginForm_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.picShowPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picShowPasswordIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,7 +156,7 @@
         private System.Windows.Forms.TextBox txtOperatorId;
         private System.Windows.Forms.Label lblUserId;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.PictureBox picShowPassword;
+        private System.Windows.Forms.PictureBox picShowPasswordIcon;
     }
 }
 

@@ -23,7 +23,7 @@ public static class Logger
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@UserId", userId.HasValue ? (object)userId.Value : DBNull.Value); // operatorId varsa → değerini alır. Yoksa(null) → DBNull.Value gönderir.
+                    cmd.Parameters.AddWithValue("@UserId", userId.HasValue ? (object)userId.Value : DBNull.Value); // userId varsa → değerini alır. Yoksa(null) → DBNull.Value gönderir.
                     cmd.Parameters.AddWithValue("@Action", action);
                     cmd.Parameters.AddWithValue("@Timestamp", DateTime.Now);
                     cmd.ExecuteNonQuery();

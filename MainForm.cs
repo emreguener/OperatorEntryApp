@@ -110,5 +110,15 @@ namespace OperatorEntryApp
             _loginForm.Show();  // Ana formu tekrar göster
             this.Close();      // Kayıt formunu kapat
         }
+
+        private void pictureBoxUserSettings_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // MainForm'u gizle
+
+            UserSettingsForm userSettingsForm = new UserSettingsForm(this, _userId, _fullName, _role);
+            userSettingsForm.ShowDialog();
+
+            this.Show(); // Ayarlar formu kapanınca geri göster
+        }
     }
 }

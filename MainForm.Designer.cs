@@ -39,6 +39,10 @@
             this.lblSupplierCode = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.panelUser = new System.Windows.Forms.Panel();
+            this.pictureBoxUserSettings = new System.Windows.Forms.PictureBox();
+            this.panelUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserSettings)).BeginInit();
             this.SuspendLayout();
             // 
             // lblWelcome
@@ -46,7 +50,7 @@
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblWelcome.ForeColor = System.Drawing.Color.DimGray;
-            this.lblWelcome.Location = new System.Drawing.Point(36, 36);
+            this.lblWelcome.Location = new System.Drawing.Point(8, 184);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(98, 23);
             this.lblWelcome.TabIndex = 0;
@@ -54,7 +58,7 @@
             // 
             // txtSupplierCode
             // 
-            this.txtSupplierCode.Location = new System.Drawing.Point(202, 125);
+            this.txtSupplierCode.Location = new System.Drawing.Point(414, 126);
             this.txtSupplierCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSupplierCode.Name = "txtSupplierCode";
             this.txtSupplierCode.Size = new System.Drawing.Size(289, 30);
@@ -62,7 +66,7 @@
             // 
             // txtProductBarcode
             // 
-            this.txtProductBarcode.Location = new System.Drawing.Point(202, 226);
+            this.txtProductBarcode.Location = new System.Drawing.Point(414, 227);
             this.txtProductBarcode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProductBarcode.Name = "txtProductBarcode";
             this.txtProductBarcode.Size = new System.Drawing.Size(289, 30);
@@ -73,7 +77,7 @@
             this.lblProductBarcode.AutoSize = true;
             this.lblProductBarcode.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblProductBarcode.ForeColor = System.Drawing.Color.DimGray;
-            this.lblProductBarcode.Location = new System.Drawing.Point(36, 229);
+            this.lblProductBarcode.Location = new System.Drawing.Point(248, 230);
             this.lblProductBarcode.Name = "lblProductBarcode";
             this.lblProductBarcode.Size = new System.Drawing.Size(141, 23);
             this.lblProductBarcode.TabIndex = 4;
@@ -84,7 +88,7 @@
             this.lblUserId.AutoSize = true;
             this.lblUserId.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblUserId.ForeColor = System.Drawing.Color.DimGray;
-            this.lblUserId.Location = new System.Drawing.Point(577, 36);
+            this.lblUserId.Location = new System.Drawing.Point(8, 216);
             this.lblUserId.Name = "lblUserId";
             this.lblUserId.Size = new System.Drawing.Size(64, 23);
             this.lblUserId.TabIndex = 5;
@@ -93,6 +97,8 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExit.ForeColor = System.Drawing.Color.Black;
             this.btnExit.Location = new System.Drawing.Point(775, 32);
@@ -107,9 +113,11 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(40, 307);
+            this.btnSave.Location = new System.Drawing.Point(252, 308);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(84, 33);
@@ -121,9 +129,11 @@
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnClear.ForeColor = System.Drawing.Color.Black;
-            this.btnClear.Location = new System.Drawing.Point(202, 307);
+            this.btnClear.Location = new System.Drawing.Point(414, 308);
             this.btnClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(84, 33);
@@ -137,7 +147,7 @@
             this.lblSupplierCode.AutoSize = true;
             this.lblSupplierCode.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblSupplierCode.ForeColor = System.Drawing.Color.DimGray;
-            this.lblSupplierCode.Location = new System.Drawing.Point(36, 128);
+            this.lblSupplierCode.Location = new System.Drawing.Point(248, 129);
             this.lblSupplierCode.Name = "lblSupplierCode";
             this.lblSupplierCode.Size = new System.Drawing.Size(121, 23);
             this.lblSupplierCode.TabIndex = 9;
@@ -146,9 +156,11 @@
             // btnRegister
             // 
             this.btnRegister.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnRegister.ForeColor = System.Drawing.Color.Black;
-            this.btnRegister.Location = new System.Drawing.Point(354, 307);
+            this.btnRegister.Location = new System.Drawing.Point(566, 308);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(137, 33);
@@ -161,9 +173,11 @@
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnBack.ForeColor = System.Drawing.Color.Black;
-            this.btnBack.Location = new System.Drawing.Point(40, 391);
+            this.btnBack.Location = new System.Drawing.Point(12, 32);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(84, 33);
@@ -172,29 +186,53 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // panelUser
+            // 
+            this.panelUser.Controls.Add(this.pictureBoxUserSettings);
+            this.panelUser.Controls.Add(this.btnBack);
+            this.panelUser.Controls.Add(this.lblWelcome);
+            this.panelUser.Controls.Add(this.lblUserId);
+            this.panelUser.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelUser.Location = new System.Drawing.Point(0, 0);
+            this.panelUser.Name = "panelUser";
+            this.panelUser.Size = new System.Drawing.Size(242, 647);
+            this.panelUser.TabIndex = 10;
+            // 
+            // pictureBoxUserSettings
+            // 
+            this.pictureBoxUserSettings.Image = global::OperatorEntryApp.Properties.Resources.user_icon;
+            this.pictureBoxUserSettings.Location = new System.Drawing.Point(12, 115);
+            this.pictureBoxUserSettings.Name = "pictureBoxUserSettings";
+            this.pictureBoxUserSettings.Size = new System.Drawing.Size(100, 50);
+            this.pictureBoxUserSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxUserSettings.TabIndex = 11;
+            this.pictureBoxUserSettings.TabStop = false;
+            this.pictureBoxUserSettings.Click += new System.EventHandler(this.pictureBoxUserSettings_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(900, 647);
-            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.panelUser);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.lblSupplierCode);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.lblUserId);
             this.Controls.Add(this.lblProductBarcode);
             this.Controls.Add(this.txtProductBarcode);
             this.Controls.Add(this.txtSupplierCode);
-            this.Controls.Add(this.lblWelcome);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.panelUser.ResumeLayout(false);
+            this.panelUser.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserSettings)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,5 +251,7 @@
         private System.Windows.Forms.Label lblSupplierCode;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Panel panelUser;
+        private System.Windows.Forms.PictureBox pictureBoxUserSettings;
     }
 }

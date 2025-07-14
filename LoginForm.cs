@@ -170,9 +170,9 @@ namespace OperatorEntryApp
             if (isMousePressed)
             {
                 // PictureBox'ın sınırları içinde mi
-                Point cursorPos = picShowPassword.PointToClient(Cursor.Position);
-                if (cursorPos.X < 0 || cursorPos.X > picShowPassword.Width || // pozisyonda sol üst köşe baz alınır (0,0)
-                    cursorPos.Y < 0 || cursorPos.Y > picShowPassword.Height)
+                Point cursorPos = picShowPasswordIcon.PointToClient(Cursor.Position);
+                if (cursorPos.X < 0 || cursorPos.X > picShowPasswordIcon.Width || // pozisyonda sol üst köşe baz alınır (0,0)
+                    cursorPos.Y < 0 || cursorPos.Y > picShowPasswordIcon.Height)
                 {
                     isMousePressed = false;
                     if (txtPassword.Text != "Enter Password")
