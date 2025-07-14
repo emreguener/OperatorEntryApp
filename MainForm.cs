@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Configuration;
+using System.Drawing;
 namespace OperatorEntryApp
 {
     public partial class MainForm : Form
@@ -23,8 +24,11 @@ namespace OperatorEntryApp
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            timerClock.Start();
+            UpdateRecentEntries();
             lblWelcome.Text = $"Welcome, {_fullName}";
-            lblUserId.Text = $"Signed in User ID: {_userId}";
+            lblUserId.Text = $"User ID: {_userId}";
+            lblRole.Text = $"Role: {_role}";
             txtProductBarcode.Focus();
 
             // Sadece admin yetkili kişiler için register butonunu göster
@@ -37,6 +41,59 @@ namespace OperatorEntryApp
                 btnRegister.Visible = false;
             }
         }
+
+        private void UpdateRecentEntries()
+        {
+            lvRecentEntries.Items.Clear(); // Temizle
+
+            // Kolonlar sadece bir kez eklenmeli
+            if (lvRecentEntries.Columns.Count == 0)
+            {
+                lvRecentEntries.Columns.Add("Barcode", 120);
+                lvRecentEntries.Columns.Add("Supplier Code", 120);
+                lvRecentEntries.Columns.Add("Time", 100);
+            }
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string query = @"SELECT TOP 5 ProductBarcode, SupplierCode, Timestamp 
+                             FROM UserInputs 
+                             WHERE UserId = @userId 
+                             ORDER BY Timestamp DESC";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@userId", _userId);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string barcode = reader["ProductBarcode"].ToString();
+                                string supplier = reader["SupplierCode"].ToString();
+                                string time = Convert.ToDateTime(reader["Timestamp"]).ToString("HH:mm:ss");
+
+                                ListViewItem item = new ListViewItem(barcode);
+                                item.SubItems.Add(supplier);
+                                item.SubItems.Add(time);
+
+                                lvRecentEntries.Items.Add(item);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to load recent entries.\n" + ex.Message);
+            }
+        }
+
+
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -76,6 +133,7 @@ namespace OperatorEntryApp
                 }
 
                 MessageBox.Show("Data saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                UpdateRecentEntries(); // Yeni veriyi listeye ekle
                 txtProductBarcode.Clear();
                 txtSupplierCode.Clear();
                 txtProductBarcode.Focus();
@@ -119,6 +177,21 @@ namespace OperatorEntryApp
             userSettingsForm.ShowDialog();
 
             this.Show(); // Ayarlar formu kapanınca geri göster
+        }
+
+        private void timerClock_Tick(object sender, EventArgs e)
+        {
+            lblClock.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void btnSave_MouseEnter(object sender, EventArgs e)
+        {
+            btnSave.BackColor = Color.LightGreen; // hover olduğunda yeşil
+        }
+
+        private void btnSave_MouseLeave(object sender, EventArgs e)
+        {
+            btnSave.BackColor = Color.SteelBlue; // eski rengine dön
         }
     }
 }

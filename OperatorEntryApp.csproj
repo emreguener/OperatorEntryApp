@@ -116,5 +116,17 @@
   <ItemGroup>
     <None Include="Resources\png-transparent-haier-hd-logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4237837.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3862150-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4856668.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

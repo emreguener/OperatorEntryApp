@@ -63,9 +63,9 @@ namespace OperatorEntryApp.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap password_icon {
+        internal static System.Drawing.Bitmap _4237837 {
             get {
-                object obj = ResourceManager.GetObject("password_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("4237837", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,19 @@ namespace OperatorEntryApp.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap png_transparent_haier_hd_logo {
+        internal static System.Drawing.Bitmap barcode {
             get {
-                object obj = ResourceManager.GetObject("png-transparent-haier-hd-logo", resourceCulture);
+                object obj = ResourceManager.GetObject("barcode", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap password_icon {
+            get {
+                object obj = ResourceManager.GetObject("password_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
